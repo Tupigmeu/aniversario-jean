@@ -10,6 +10,8 @@
 
     body{
         background-color: black;
+        overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     @keyframes rainbow {
@@ -20,6 +22,24 @@
         68% { color: #c92af5 }
         85% { color: #f5dd2a }
         100% { color: #66655d }
+    }
+
+    @keyframes gif {
+        0% {
+            transform: rotate(0deg) translateX(50%);
+        }
+        25%{
+            transform: rotate(90deg);
+        }
+        50%{
+            transform: rotate(180deg) translateX(80%);
+        }
+        75%{
+            transform: rotate(270deg);
+        }
+        100%{
+            transform: rotate(360deg) translateX(0%);
+        }
     }
  
     .rainbow {
@@ -36,6 +56,12 @@
         display: flex;
         justify-content: space-between;
     }
+    .gif{
+        transform: translate(-100px, 300px);
+        animation-name: gif;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
 </style>
 <body>
     <div class="box1">
@@ -50,7 +76,7 @@
 
     <div class="box2">
         <video src="VID-20200507-WA0090.mp4" controls></video>
-        <img src="https://i.pinimg.com/originals/14/cb/58/14cb58112cd46f0ee7ca166348ec9bb1.gif" alt="" width="300px">
+        <img src="https://i.pinimg.com/originals/14/cb/58/14cb58112cd46f0ee7ca166348ec9bb1.gif" alt="" width="300px" class="gif">
     </div>
 
 </body>
